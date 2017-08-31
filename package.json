@@ -1,0 +1,39 @@
+{
+  "name": "eslint-config-defaults",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">= 8.1",
+    "npm": ">= 5.1"
+  },
+  "description": "Reusable ESLint Configs",
+  "main": "browser.js",
+  "scripts": {
+    "cover": "nyc --check-coverage npm test -- --reporter=progress",
+    "init": "rm -rf ./node_modules; npm install",
+    "test": "mocha --reporter=list $(find . ! -path '*node_modules*' -name '*.test.js')",
+    "lint": "eslint $(find . ! -path '*node_modules*' -type f | egrep '[.]js$')",
+    "verify": "npm run init && npm run lint && npm run cover"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/colbydauph/eslint-config-defaults.git"
+  },
+  "keywords": [],
+  "author": "Jason Leibowitz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/colbydauph/eslint-config-defaults/issues"
+  },
+  "homepage": "https://github.com/colbydauph/eslint-config-defaults#readme",
+  "dependencies": {
+    "babel-eslint": "~7.2.3",
+    "eslint": "~4.3.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "~7.1.0"
+  },
+  "devDependencies": {
+    "chai": "~4.1.0",
+    "mocha": "~3.4.2",
+    "nyc": "~11.0.3"
+  }
+}
