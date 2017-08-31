@@ -1,8 +1,8 @@
 # eslint-config-defaults
 Shareable ESLint Configs. Heavily inspired by [Colby Dauphinais](https://github.com/colbydauph) and [Airbnb](https://github.com/airbnb/javascript).
 
-## React Rules
-
+<details>
+<summary>React Rules</summary>
 #### Basic Rules
 * Only include one React component per file [[rule]](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-multi-comp.md).
 * Always use JSX syntax.
@@ -31,16 +31,6 @@ const ReservationItem = <ReservationCard />;
 
 // good
 const reservationItem = <ReservationCard />;
-```
-
-* Constructor names should begin with a capital letter. eslint: [new-cap](https://eslint.org/docs/rules/new-cap)
-
-```jsx
-// bad
-const friend = new person();
-
-// good
-const friend = new Person();
 ```
 
 #### Alignment
@@ -255,7 +245,7 @@ static propTypes = {
 }
 ```
 
-* Do not put more than 4 props on a line. eslint: [jsx-max-props-per-line](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-max-props-per-line.md)
+* Do not put more than 1 prop on a line if the JSX element spans multiple lines. eslint: [jsx-max-props-per-line](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-max-props-per-line.md)
 
 * Do not duplicate prop definitions. eslint: [react/jsx-no-duplicate-props](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-duplicate-props.md)
 
@@ -529,3 +519,13 @@ const Hello = <a target="_blank" rel="noopener noreferrer" href="http://example.
 const Hello = <a target="_blank" href="relative/path/in/the/host" />
 const Hello = <a target="_blank" href="/absolute/path/in/the/host" />
 ```
+
+* Do not use string literals in JSX. This prevents any odd artifacts of highlighters if your unwrapped string contains an enclosing character like `'` in contradictions and enforces consistency. eslint: [react/jsx-no-literals](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-literals.md)
+```jsx
+// bad
+const Hello = <div>Hello</div>;
+
+// good
+const Hello = <div>{"Hello"}</div>;
+```
+</details>
