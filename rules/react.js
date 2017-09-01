@@ -47,7 +47,6 @@ module.exports = {
         'componentWillUnmount',
       ],
     }],
-    'jsx-a11y/img-has-alt': [2],
 
     // Specify whether double or single quotes should be used in JSX attributes
     // http://eslint.org/docs/rules/jsx-quotes
