@@ -8,9 +8,6 @@ module.exports = {
     mocha: true,
   },
 
-  rules: {
-    'no-console': [0],
-    'max-statements': [1, 50],
-  },
+  rules: {},
 
 };

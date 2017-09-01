@@ -231,7 +231,7 @@ module.exports = {
     // Prevents common casing typos
     // https://github.com/yannickcr/eslint-plugin-react/blob/73abadb697034b5ccb514d79fb4689836fe61f91/docs/rules/no-typos.md
     // TODO: enable, semver-major
-    'react/no-typos': [1],
+    // 'react/no-typos': [1],
 
     // Prevent invalid characters from appearing in markup
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unescaped-entities.md
