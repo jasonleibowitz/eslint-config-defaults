@@ -1,4 +1,4 @@
-modules.export = {
+module.exports = {
   plugins: [
     'jsx-a11y',
     'react'
@@ -19,5 +19,6 @@ modules.export = {
       object: [],
       area: [],
       'input[type="image"]': [],
+    }],
   }
-}
+};
