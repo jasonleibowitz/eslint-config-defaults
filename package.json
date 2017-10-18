@@ -2,7 +2,7 @@
   "name": "eslint-config-defaults",
   "version": "1.0.0",
   "engines": {
-    "node": ">= 8.1",
+    "node": ">= 6.11.0",
     "npm": ">= 5.1"
   },
   "description": "Reusable ESLint Configs",
